@@ -1,0 +1,227 @@
+
+/*! global styles */
+
+/* ?Selective nulling */
+
+/* Removing the underscore and blue color of all links */
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Specify box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/* Remove standard styling for all ul and il that have a class attribute*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Inherit fonts for intuitions and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Simplifying work with images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Elements a that don't have a class are reset to default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* ?! */
+
+/* Remove internal indentation */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove the outside indentation */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0)
+}
+
+/* !!page */
+
+:root {
+	--main-text-color: #ffffff;  /* *White */
+  --main-bg-color: #000000;    /* *Bg-dark */
+  --second-text-color: #bdae82;  /* *Gold */
+}
+
+html {
+	background-color: var(--main-bg-color);
+	color: var(--main-text-color);
+	font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+body {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+/* header */
+
+.main-header {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 70px;
+}
+
+.wrapper-logo {
+	display: flex;
+	width: 50px;
+	height: 50px;
+	justify-content: center;
+	align-self: center;
+	margin-left: 70px;
+}
+
+.logo-link{
+	display: flex;
+	width: 50px;
+	height: 50px;
+}
+
+.button-list{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-self: center;
+	flex-wrap: wrap;
+}
+
+.button-item {
+	margin-left: 41px;
+}
+
+/* main */
+
+main {
+	display: flex;
+	width: 100%;
+	height: calc(100vh - 129px);
+	background-image: url(./assets/img/forest.jpg);
+	background-repeat: no-repeat;
+  background-position: center;
+	background-size: cover;
+  align-items: center;
+  justify-content: center;
+	transition: 0.4s;
+}
+
+.player-button {
+	display: flex;
+	width: 160px;
+  height: 160px;
+	align-items: center;
+  justify-content: center;
+	background-image: url(./assets/svg/play.svg);
+	background-repeat: no-repeat;
+  background-position: center;
+	background-size: 100%;
+	background-color: inherit;
+	border: none;
+}
+
+/* footer */
+
+.main-footer {
+	display: inline-flex;
+	padding: 5px 40px;
+	margin-top: auto;
+	align-content: flex-end;
+}
+
+.wrapper-git {
+    justify-content: center;
+    align-self: center;
+}
+
+.copy {
+	padding-right: 20px;
+}
+
+.year {
+	padding-right: 20px;
+}
+
+.links-list {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-between;
+	
+}
+
+.rs-link {
+	display: flex;
+	width: 135px;
+	height: 50px;
+}
+
+/* !buttons links animation */
+
+.button:hover ,
+.button:focus {	
+	filter: sepia(35%) invert(27%) hue-rotate(7deg) brightness(93%) contrast(75%);
+	transition: 0.27s;
+}
+
+.pause-button {
+	background-image: url(./assets/svg/pause.svg);
+	background-repeat: no-repeat;
+  background-position: center;
+	background-size: 100%;
+	background-color: inherit;
+}
+
+.active-toggle ,
+.active {
+	filter: sepia(35%) invert(27%) hue-rotate(7deg) brightness(93%) contrast(75%);
+}
